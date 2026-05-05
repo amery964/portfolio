@@ -111,8 +111,8 @@ unset($_SESSION['message'], $_SESSION['message_type']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'Amery Kouomou, développeur web passionné par la création d'applications web modernes et interactives.">
-    <meta name="keywords" content="développeur web, portfolio, HTML, CSS, JavaScript, PHP, Java, C#">
+    <meta name="description" content="Portfolio d'Amery Kouomou, étudiante en 3e année bachelor informatique spécialisée en Data Engineering et Data Analysis.">
+    <meta name="keywords" content="Data Engineering, Data Analysis, SQL, Python, Power BI, MySQL, MongoDB, Firebase, Node.js, Express.js, API REST, JavaScript, GitHub, Docker, Jira">
     <meta name="author" content="Amery Kouomou">
     <title>Amery Kouomou | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1085,7 +1085,7 @@ video {
 
     <nav>
         <div class="container">
-            <a href="#accueil" class="logo"><img src="moi.jpg" alt="" class="moi">     Amery Kouomou</a>
+            <a href="#accueil" class="logo"><img src="moi.jpg" alt="" class="moi">     Amery Djanang Kouomou</a>
             <ul id="menu">
                 <li><a href="#accueil" class="active">Accueil</a></li>
                 <li><a href="#competences">Compétences</a></li>
@@ -1103,7 +1103,7 @@ video {
         <div id="particles"></div>
         <div class="header-content">
             <h1 class="animate__fadeInUp">Bienvenue sur mon Portfolio</h1>
-            <p class="animate__fadeInUp delay-1">Je suis Amery Kouomou, Etudiante en 3e année bachelor informatique.</p>
+            <p class="animate__fadeInUp delay-1">Je suis Amery Djanang Kouomou, étudiante en 3e année bachelor informatique, à l'aise avec SQL, Python et Power BI, et en route vers un poste de Data Analyst ou Data Engineer. Je recherche actuellement un stage pour juin 2026 et une alternance pour septembre 2026.</p>
             <a href="#contact" class="btn animate__fadeInUp delay-2">Me contacter</a>
         </div>
         <a href="#competences" class="scroll-down" aria-label="Défiler vers les compétences">
@@ -1115,55 +1115,63 @@ video {
         <div class="container">
             <div class="section-title">
                 <h2>Mes Compétences</h2>
-                <p>Voici les technologies et outils que je maîtrise pour créer des expériences web modernes et performantes.</p>
+                <p>Voici les technologies et outils que je maîtrise pour analyser, transformer et visualiser des données, ainsi que pour développer des services backend.</p>
             </div>
             <div class="competences-container">
                 <div class="competence-card">
-                    <i class="fab fa-html5" aria-hidden="true"></i>
-                    <h3>HTML5</h3>
-                    <p>Maîtrise avancée du langage HTML5 pour structurer des pages web sémantiques et accessibles.</p>
+                    <i class="fab fa-python" aria-hidden="true"></i>
+                    <h3>Python</h3>
+                    <p>Analyse de données, nettoyage et KPI avec Pandas et NumPy.</p>
                     <div class="skill-level" aria-label="Niveau de compétence: 90%">
                         <div class="skill-progress" data-level="90"></div>
                     </div>
                 </div>
                 <div class="competence-card">
-                    <i class="fab fa-css3-alt" aria-hidden="true"></i>
-                    <h3>CSS3</h3>
-                    <p>Création de designs modernes et responsive avec CSS3 et ses frameworks comme Bootstrap et Tailwind.</p>
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <h3>SQL & Bases de données</h3>
+                    <p>MySQL, MongoDB et Firebase pour la conception, l'extraction et la gestion des données.</p>
                     <div class="skill-level" aria-label="Niveau de compétence: 85%">
                         <div class="skill-progress" data-level="85"></div>
                     </div>
                 </div>
                 <div class="competence-card">
-                    <i class="fab fa-js-square" aria-hidden="true"></i>
-                    <h3>JavaScript</h3>
-                    <p>Développement d'applications interactives avec JavaScript et ses bibliothèques comme jQuery et React.</p>
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <h3>Data Analysis & Visualisation</h3>
+                    <p>Création de dashboards et visuels avec Power BI, Matplotlib et Excel.</p>
+                    <div class="skill-level" aria-label="Niveau de compétence: 85%">
+                        <div class="skill-progress" data-level="85"></div>
+                    </div>
+                </div>
+                <div class="competence-card">
+                    <i class="fas fa-server" aria-hidden="true"></i>
+                    <h3>Back-end & API</h3>
+                    <p>Node.js, Express.js, API REST, JSON et intégration de services pour des applications robustes.</p>
                     <div class="skill-level" aria-label="Niveau de compétence: 80%">
                         <div class="skill-progress" data-level="80"></div>
                     </div>
                 </div>
                 <div class="competence-card">
-                    <i class="fab fa-php" aria-hidden="true"></i>
-                    <h3>PHP</h3>
-                    <p>Développement d'applications web dynamiques avec PHP et des frameworks comme Laravel.</p>
+                    <i class="fab fa-js-square" aria-hidden="true"></i>
+                    <h3>JavaScript</h3>
+                    <p>JavaScript moderne pour le développement d'interfaces et l'interaction web côté client.</p>
+                    <div class="skill-level" aria-label="Niveau de compétence: 80%">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                </div>
+                <div class="competence-card">
+                    <i class="fab fa-html5" aria-hidden="true"></i>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Structuration et design responsive d'interfaces web accessibles.</p>
+                    <div class="skill-level" aria-label="Niveau de compétence: 80%">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                </div>
+                <div class="competence-card">
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <h3>Outils & Collaboration</h3>
+                    <p>GitLab / GitHub, Docker et Jira pour le versioning, l'automatisation et le suivi agile.</p>
                     <div class="skill-level" aria-label="Niveau de compétence: 75%">
                         <div class="skill-progress" data-level="75"></div>
-                    </div>
-                </div>
-                <div class="competence-card">
-                    <i class="fab fa-java" aria-hidden="true"></i>
-                    <h3>Java</h3>
-                    <p>Développement d'applications Java robustes et performantes avec Spring Boot.</p>
-                    <div class="skill-level" aria-label="Niveau de compétence: 70%">
-                        <div class="skill-progress" data-level="70"></div>
-                    </div>
-                </div>
-                <div class="competence-card">
-                    <i class="fab fa-microsoft" aria-hidden="true"></i>
-                    <h3>C# .NET</h3>
-                    <p>Développement d'applications avec C# et le framework .NET.</p>
-                    <div class="skill-level" aria-label="Niveau de compétence: 65%">
-                        <div class="skill-progress" data-level="65"></div>
                     </div>
                 </div>
             </div>
@@ -1173,46 +1181,43 @@ video {
     <section id="projets">
         <div class="container">
             <div class="section-title">
-                <h2>Mes Projets</h2>
-                <p>Découvrez quelques-uns des projets sur lesquels j'ai travaillé récemment.</p>
+                <h2>Projets Académiques</h2>
+                <p>Projets réalisés dans le cadre de mes études, en analyse de données, back-end et visualisation.</p>
             </div>
             <div class="projets-container">
                 <div class="projet-card">
                     <div class="projet-image">
-                        <img src="programmephp.png" alt="Capture d'écran du programme de gestion">
+                        <img src="programmephp.png" alt="Analyse du cancer - visualisation des données">
                     </div>
                     <div class="projet-content">
-                        <h3>Programme de Gestion</h3>
-                        <p>Une application complète de gestion d'établissement développée avec PHP et MySQL.</p>
+                        <h3>Analyse de l'Impact du Cancer</h3>
+                        <p>Projet d'analyse de données sur l'impact du cancer selon les groupes d'âge et son évolution temporelle. Utilisation de Python, Pandas et Matplotlib pour analyser les tendances et visualiser les inégalités face à cette maladie.</p>
                         <div class="projet-links">
-                            <a href="#" class="view-project" data-video="phpVideo.mp4"><i class="fas fa-eye"></i> Voir le projet</a>
-                            <a href="https://github.com/AymerickVick/projet/tree/prive" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code source</a>
+                            <a href="https://github.com/amery964/cancer-data-analysis" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code source</a>
                         </div>
                     </div>
                 </div>
                 <div class="projet-card">
                     <div class="projet-image">
-                        <img src="csharp.png" alt="Capture d'écran du site e-commerce">
+                        <img src="csharp.png" alt="Application de gestion des repas et stock">
                     </div>
                     <div class="projet-content">
-                        <h3>Apk de resolution d'equation</h3>
-                        <p>Une application de generation des equations a trois inconnues dans un fichier csv et resolution de ces equations dans un autres fichier csv.</p>
+                        <h3>Gestion des Repas et Stock Familial</h3>
+                        <p>Application mobile développée en React Native pour la gestion des repas et du stock alimentaire dans une famille. Permet de planifier les menus, suivre les stocks et optimiser les achats.</p>
                         <div class="projet-links">
-                            <a href="#" class="view-project" data-video="ecommerceVideo.mp4"><i class="fas fa-eye"></i> Voir le projet</a>
-                            <a href="https://github.com/AymerickVick/ecommerce" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code source</a>
+                            <a href="https://github.com/amery964/plannif-tchop" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code source</a>
                         </div>
                     </div>
                 </div>
                 <div class="projet-card">
                     <div class="projet-image">
-                        <img src="porte.png" alt="Capture d'écran du portfolio">
+                        <img src="porte.png" alt="Backend de gestion d'auto-école">
                     </div>
                     <div class="projet-content">
-                        <h3>Portfolio Personnel</h3>
-                        <p>Ce portfolio responsive développé avec HTML, CSS et JavaScript pour présenter mes compétences et projets.</p>
+                        <h3>Backend Auto-école (projet de stage)</h3>
+                        <p>Projet de stage backend pour une auto-école avec gestion des utilisateurs, des créneaux et des séances. Développé en Node.js et Express, avec un backend structuré pour Firebase et gestion des données en temps réel.</p>
                         <div class="projet-links">
-                            <a href="#" class="view-project" data-video="portfolioVideo.mp4"><i class="fas fa-eye"></i> Voir le projet</a>
-                            <a href="https://github.com/AymerickVick/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code source</a>
+                            <a href="https://github.com/ulrichfots/backend-auto_ecole" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code source</a>
                         </div>
                     </div>
                 </div>
@@ -1224,41 +1229,26 @@ video {
         <div class="container">
             <div class="section-title">
                 <h2>Formations et Expériences</h2>
-                <p>Mon parcours académique et professionnel dans le domaine du développement web.</p>
+                <p>Mon parcours académique orienté Data Engineering et analyse de données.</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2022 - 2023</div>
-                        <h3>Baccalauréat technique et commercial(ses/g3)</h3>
-                        <p>College fx vogt ou j'ai pu apprendre les matières comme les statistiques,mathématiques appliquées et meme l'informatique appliquée a l'économie.</p>
+                        <div class="timeline-date">Dès septembre 2026</div>
+                        <h3>Master of Data Engineering for AI</h3>
+                        <p>EFREI, Paris - Formation axée sur la gestion des données, les pipelines et l'intelligence artificielle.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2023 - 2024</div>
-                        <h3>Bachelor niveau 1</h3>
-                        <p>Université keyce informatique et intelligence artificielle - Certification cisco en architecture des ordinateurs.</p>
+                        <div class="timeline-date">En cours</div>
+                        <h3>Bachelor Ingénierie informatique</h3>
+                        <p>Supinfo, Paris - Développement web, bases de données et data analysis.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023-2024</div>
-                        <h3>Bachelor niveau 1</h3>
-                        <p>keyce informatique et intelligence artificielle- ici en tronc commun j'ai pu explorer les domaines tels que ceux de la cybersécurité,du réseau CCNA1 et 2,et meme certains languages de programmations (C,html/css...).</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024 - 2025</div>
-                        <h3>Bachelor niveau 2</h3>
-                        <p>keyce informatique et intelligence artificielle - Création de sites web responsives,mise sur pieds de certains projets comme la creation d'applications ,sites web...,maitrise de la gestion des bases de données.</p>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </section>
@@ -1272,7 +1262,8 @@ video {
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Informations de Contact</h3>
-                    <p>Je suis disponible à repondre à toutes vos questions.</p>
+                    <p>Je suis disponible à répondre à toutes vos questions.</p>
+                    <p><strong>📍 Recherche active :</strong> Stage pour juin 2026 et alternance pour septembre 2026</p>
                     <div class="contact-details">
                         <div>
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
@@ -1286,11 +1277,19 @@ video {
                             <i class="fas fa-phone" aria-hidden="true"></i>
                             <span>+33 65877921</span>
                         </div>
+                        <div>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <a href="cv-stage.pdf" target="_blank" style="color: var(--accent-color); text-decoration: none;">CV Stage</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <a href="cv-alternance.pdf" target="_blank" style="color: var(--accent-color); text-decoration: none;">CV Alternance</a>
+                        </div>
                     </div>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/amery-kouomou" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AymerickVick" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/AymerickVick" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/amery964" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/amery964" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1320,7 +1319,7 @@ video {
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>À propos</h3>
-                    <p>Développeur web passionné par la création d'expériences numériques modernes et accessibles.</p>
+                    <p>Étudiante en 3e année bachelor informatique, positionnée vers des postes de Data Analyst ou Data Engineer.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Liens Rapides</h3>
@@ -1338,8 +1337,8 @@ video {
                     <p>+3365877921</p>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/amery-kouomou" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AymerickVick" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/AymerickVick" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/amery964" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        
                     </div>
                 </div>
             </div>
@@ -1348,17 +1347,6 @@ video {
             </div>
         </div>
     </footer>
-
-    <!-- Modal pour les vidéos de projets -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" aria-label="Fermer">&times;</span>
-            <video id="projectVideo" controls>
-                <source src="" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
-        </div>
-    </div>
 
     <!-- Notification pour les messages -->
     <div id="notification" class="notification">Message envoyé avec succès!</div>
@@ -1372,8 +1360,6 @@ video {
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
         const notification = document.getElementById('notification');
-        const videoModal = document.getElementById('videoModal');
-        const projectVideo = document.getElementById('projectVideo');
 
         // Afficher une notification
         function showNotification(message, type) {
@@ -1392,7 +1378,6 @@ video {
             initSkillBars();
             setupSmoothScroll();
             setupContactForm();
-            setupProjectVideos();
 
             // Vérifier s'il y a un message flash à afficher
             <?php if ($message): ?>
@@ -1589,45 +1574,6 @@ video {
                     console.error('Erreur:', error);
                 });
             });
-        }
-
-        // Configuration des vidéos de projets
-        function setupProjectVideos() {
-            // Ouvrir la modal au clic sur "Voir le projet"
-            document.querySelectorAll('.view-project').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const videoSrc = this.getAttribute('data-video');
-                    projectVideo.querySelector('source').src = videoSrc;
-                    projectVideo.load();
-                    videoModal.style.display = 'flex';
-
-                    // Pause la vidéo quand la modal est fermée
-                    projectVideo.play();
-                });
-            });
-
-            // Fermer la modal
-            document.querySelector('.close').addEventListener('click', closeVideoModal);
-
-            // Fermer la modal en cliquant en dehors
-            window.addEventListener('click', function(e) {
-                if (e.target === videoModal) {
-                    closeVideoModal();
-                }
-            });
-
-            // Fermer avec la touche Escape
-            window.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && videoModal.style.display === 'flex') {
-                    closeVideoModal();
-                }
-            });
-        }
-
-        function closeVideoModal() {
-            videoModal.style.display = 'none';
-            projectVideo.pause();
         }
 
         // Observer les éléments pour les rendre visibles
