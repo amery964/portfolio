@@ -1,28 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'Amery Kouomou, étudiante en 3e année bachelor informatique spécialisée en Data Engineering et Data Analysis.">
-    <meta name="keywords" content="Data Engineering, Data Analysis, SQL, Python, Power BI, MySQL, MongoDB, Firebase, Node.js, Express.js, API REST, JavaScript, GitHub, Docker, Jira">
-    <meta name="author" content="Amery Kouomou">
-    <title>Amery Kouomou | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Favicon -->
+
+    <meta name="description" content="Portfolio d'Amery Djanang Kouomou, étudiante en Mastère Data Engineering for AI à l'EFREI. Découvrez ses projets en Data Engineering, Data Analytics et Business Intelligence.">
+    <meta name="keywords" content="Amery Kouomou, Data Engineering, Data Analytics, Business Intelligence, Python, SQL, Power BI, Pandas, EFREI">
+    <meta name="author" content="Amery Djanang Kouomou">
+
+    <title>Amery Djanang Kouomou | Portfolio Data</title>
+
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         :root {
-    --primary-color: #5e4bb7;      /* violet doux */
-    --secondary-color: #8d7bf3;    /* lavande claire */
-    --accent-color: #c292f7;       /* rose-violet doux */
-    --text-color: #1d1b33;
-    --light-text: #ffffff;
-    --background-color: linear-gradient(135deg, #140f2f 0%, #2b1a55 100%);
-    --card-bg: rgba(255, 255, 255, 0.92);
-    --shadow: 0 10px 30px rgba(20, 12, 48, 0.18);
-}
+            --bg: #071426;
+            --bg-secondary: #0b1d33;
+            --card: #10243d;
+            --card-light: #142c49;
+            --cyan: #42d9f5;
+            --blue: #287bff;
+            --white: #f4f8ff;
+            --muted: #a9bad0;
+            --border: rgba(120, 180, 230, .16);
+            --gradient: linear-gradient(120deg, #287bff, #42d9f5);
+            --shadow: 0 18px 45px rgba(0, 0, 0, .25);
+        }
 
         * {
             margin: 0;
@@ -30,460 +38,367 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background: var(--background-color);
-            background-attachment: fixed;
-            overflow-x: hidden;
+        html {
             scroll-behavior: smooth;
-            position: relative;
+            scroll-padding-top: 90px;
         }
 
-        /* Animated background shapes */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.3) 0%, transparent 50%);
-            animation: float 20s ease-in-out infinite;
-            z-index: -1;
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-20px) rotate(120deg); }
-            66% { transform: translateY(10px) rotate(240deg); }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
+            width: min(1160px, 90%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 95px 0;
+        }
+
+        .section-alt {
+            background: var(--bg-secondary);
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-heading .eyebrow {
+            color: var(--cyan);
+            font-size: .85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin: 10px 0;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         /* Navigation */
+
         nav {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 1rem 0;
             position: fixed;
-            width: 100%;
-            top: 0;
+            inset: 0 0 auto;
             z-index: 1000;
-            transition: var(--transition);
+            background: rgba(7, 20, 38, .92);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
         }
 
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: var(--shadow);
-        }
-
-        nav .container {
+        .nav-container {
+            min-height: 76px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 25px;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            letter-spacing: -0.5px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: .5px;
         }
 
-        nav ul {
-            list-style-type: none;
+        .logo span {
+            color: var(--cyan);
+        }
+
+        .nav-links {
             display: flex;
-            gap: 2.5rem;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
         }
 
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
+        .nav-links a {
+            color: var(--muted);
+            font-size: .9rem;
+            transition: .25s;
         }
 
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
+        .nav-links a:hover {
+            color: var(--cyan);
         }
 
         .menu-toggle {
             display: none;
-            flex-direction: column;
+            background: none;
+            border: 0;
+            color: white;
+            font-size: 1.5rem;
             cursor: pointer;
-            padding: 0.5rem;
         }
 
-        .menu-toggle span {
-            width: 30px;
-            height: 3px;
-            background: var(--text-color);
-            margin: 4px 0;
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-
-        /* Header */
-        header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 100px;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
-            backdrop-filter: blur(1px);
-        }
-
-        .hero-content {
-            text-align: center;
-            color: var(--light-text);
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: -1px;
-            line-height: 1.1;
-        }
-
-        .hero-content p {
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.95;
-            line-height: 1.6;
-        }
+        /* Buttons */
 
         .btn {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: linear-gradient(135deg, var(--accent-color), #ff6b9d);
-            color: var(--light-text);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: var(--transition);
-        }
-
-        .btn:hover::before {
-            left: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 21px;
+            border-radius: 9px;
+            background: var(--gradient);
+            color: #06172b;
+            font-weight: 700;
+            transition: .25s;
+            border: 1px solid transparent;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(240, 147, 251, 0.4);
+            box-shadow: 0 10px 25px rgba(66, 217, 245, .2);
         }
 
-        /* Sections */
-        section {
-            padding: 6rem 0;
-            position: relative;
+        .btn-outline {
+            color: var(--white);
+            border-color: rgba(66, 217, 245, .5);
+            background: transparent;
         }
 
-        .section-bg {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin: 2rem;
-            padding: 3rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .btn-outline:hover {
+            background: rgba(66, 217, 245, .1);
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+        /* Hero */
 
-        .section-title h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .section-title p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--text-color);
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.8;
-        }
-
-        /* About */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
+        header {
+            min-height: 760px;
+            display: flex;
             align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
+            position: relative;
+            padding: 145px 0 90px;
+            background:
+                radial-gradient(circle at 80% 25%, rgba(40, 123, 255, .2), transparent 30%),
+                radial-gradient(circle at 15% 80%, rgba(66, 217, 245, .1), transparent 30%);
         }
 
-        .about-text h3 {
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--cyan);
+            border: 1px solid rgba(66, 217, 245, .3);
+            background: rgba(66, 217, 245, .08);
+            border-radius: 30px;
+            padding: 8px 15px;
+            font-size: .85rem;
+            margin-bottom: 25px;
+        }
+
+        .availability-dot {
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background: #42e6a4;
+            box-shadow: 0 0 10px #42e6a4;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero-subtitle {
+            color: var(--cyan);
+            font-size: clamp(1.05rem, 2vw, 1.35rem);
             font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .hero-tags span {
+            padding: 7px 13px;
+            background: rgba(255,255,255,.05);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: #c5d7eb;
+            font-size: .83rem;
+        }
+
+        /* Cards */
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(66, 217, 245, .4);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 25px;
+            align-items: stretch;
         }
 
         .about-text p {
-            margin-bottom: 1.8rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-color);
+            color: var(--muted);
+            margin-bottom: 17px;
         }
 
-        .about-image {
-            position: relative;
+        .about-text p:last-child {
+            margin-bottom: 0;
         }
 
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 3px solid rgba(255, 255, 255, 0.3);
+        .about-highlight {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 22px;
         }
 
-        .about-image img:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        .highlight-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
         }
 
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-            border-radius: 25px;
-            z-index: -1;
-            opacity: 0.3;
+        .highlight-icon {
+            color: var(--cyan);
+            font-size: 1.3rem;
+            width: 35px;
+            flex-shrink: 0;
+        }
+
+        .highlight-item h3 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .highlight-item p {
+            font-size: .9rem;
+            color: var(--muted);
         }
 
         /* Skills */
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .skill-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .skill-card:hover::before {
-            opacity: 1;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 14px;
         }
 
         .skill-icon {
-            font-size: clamp(3rem, 6vw, 4rem);
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            display: block;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            color: var(--cyan);
+            background: rgba(66, 217, 245, .1);
+            font-size: 1.35rem;
+            margin-bottom: 17px;
         }
 
         .skill-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
         }
 
         .skill-card p {
-            color: var(--text-color);
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .skill-progress {
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            height: 10px;
-            margin: 1.5rem 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 15px;
-            width: 0;
-            transition: width 2s ease-in-out;
-            position: relative;
-        }
-
-        .skill-progress-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            color: var(--muted);
+            font-size: .9rem;
         }
 
         /* Projects */
+
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
         .project-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 1;
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: .3s;
         }
 
         .project-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            border-color: rgba(66, 217, 245, .4);
         }
 
         .project-image {
             height: 220px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, #102b50, #087eaa);
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--light-text);
-            font-size: 4.5rem;
-            position: relative;
-            overflow: hidden;
+            color: var(--cyan);
         }
 
         .project-image img {
@@ -493,872 +408,905 @@
             display: block;
         }
 
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: rotate 4s linear infinite;
+        .cancer-visual {
+            flex-direction: column;
+            gap: 12px;
         }
 
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .cancer-visual i {
+            font-size: 4rem;
+        }
+
+        .cancer-visual span {
+            font-size: .9rem;
+            font-weight: 700;
+            letter-spacing: 3px;
         }
 
         .project-content {
-            padding: 2rem;
-            position: relative;
-            z-index: 2;
+            padding: 25px;
         }
 
         .project-content h3 {
-            font-size: 1.6rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
         }
 
         .project-content p {
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-            opacity: 0.8;
-            line-height: 1.6;
+            color: var(--muted);
+            font-size: .93rem;
+            margin-bottom: 18px;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-bottom: 1.5rem;
+            gap: 8px;
+            margin-bottom: 20px;
         }
 
         .tag {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: var(--light-text);
-            padding: 0.4rem 1rem;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: var(--transition);
+            color: var(--cyan);
+            background: rgba(66, 217, 245, .09);
+            border: 1px solid rgba(66, 217, 245, .18);
+            border-radius: 5px;
+            padding: 5px 9px;
+            font-size: .78rem;
         }
 
-        .tag:hover {
-            transform: scale(1.1);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .project-links a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            border: 2px solid var(--accent-color);
-            display: flex;
+        .project-link {
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 9px;
+            color: var(--cyan);
+            font-weight: 600;
+            font-size: .9rem;
         }
 
-        .project-links a:hover {
-            background: var(--accent-color);
-            color: var(--light-text);
-            transform: translateY(-2px);
+        .project-link:hover {
+            color: white;
         }
 
-        /* Formation */
+        /* Experience and education */
+
         .timeline {
+            max-width: 850px;
+            margin: auto;
             position: relative;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
         .timeline::before {
-            content: '';
+            content: "";
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
-            border-radius: 3px;
+            left: 10px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--gradient);
         }
 
         .timeline-item {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            margin: 2.5rem 0;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
             position: relative;
-            width: calc(50% - 3rem);
-            padding: 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0 0 35px 40px;
         }
 
-        .timeline-item:nth-child(even) {
-            margin-left: auto;
-            margin-right: 0;
-        }
-
-        .timeline-item:nth-child(odd) {
-            margin-left: 0;
-            margin-right: auto;
+        .timeline-item:last-child {
+            padding-bottom: 0;
         }
 
         .timeline-item::before {
-            content: '';
+            content: "";
             position: absolute;
-            top: 2.5rem;
-            width: 25px;
-            height: 25px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            left: 3px;
+            top: 7px;
+            width: 16px;
+            height: 16px;
+            background: var(--cyan);
             border-radius: 50%;
-            border: 4px solid var(--card-bg);
-            box-shadow: var(--shadow);
-        }
-
-        .timeline-item:nth-child(even)::before {
-            right: -17px;
-        }
-
-        .timeline-item:nth-child(odd)::before {
-            left: -17px;
+            box-shadow: 0 0 15px rgba(66, 217, 245, .5);
         }
 
         .timeline-item h3 {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.8rem;
-            font-size: 1.4rem;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            color: var(--cyan);
+            font-size: .88rem;
             font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        .timeline-item .date {
-            color: var(--accent-color);
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            font-size: 1rem;
+        .timeline-item p,
+        .timeline-item li {
+            color: var(--muted);
+            font-size: .93rem;
         }
 
-        .timeline-item p {
-            color: var(--text-color);
-            opacity: 0.8;
-            line-height: 1.6;
+        .timeline-item ul {
+            padding-left: 19px;
+            margin-top: 10px;
+        }
+
+        .timeline-item li {
+            margin-bottom: 6px;
+        }
+
+        /* Opportunities */
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .opportunity-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .opportunity-card .opportunity-icon {
+            font-size: 2rem;
+            color: var(--cyan);
+            margin-bottom: 18px;
+        }
+
+        .opportunity-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .opportunity-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .opportunity-card ul {
+            list-style: none;
+            margin-bottom: 22px;
+        }
+
+        .opportunity-card li {
+            color: #c8d8e9;
+            margin-bottom: 9px;
+            font-size: .93rem;
+        }
+
+        .opportunity-card li i {
+            color: var(--cyan);
+            margin-right: 9px;
         }
 
         /* Contact */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
 
-        .contact-info h3 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text-color);
-            opacity: 0.9;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .contact-details div {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: var(--transition);
-        }
-
-        .contact-details div:hover {
-            transform: translateX(10px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-details i {
-            color: var(--accent-color);
-            font-size: 1.4rem;
-            width: 30px;
-        }
-
-        .contact-details a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .contact-details a:hover {
-            color: var(--accent-color);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .social-links a {
-            color: var(--accent-color);
-            font-size: 2rem;
-            transition: var(--transition);
-            padding: 1rem;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .social-links a:hover {
-            color: var(--light-text);
-            background: var(--accent-color);
-            transform: scale(1.2) translateY(-5px);
-            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
-        }
-
-        .contact-form h3 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .contact-form p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text-color);
-            opacity: 0.9;
-        }
-
-        .contact-form .btn {
-            margin: 1rem 0.5rem 0 0;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid var(--glass-border);
-            color: var(--text-color);
+        .contact-box {
             text-align: center;
-            padding: 3rem 0;
-            margin-top: 2rem;
+            max-width: 800px;
+            margin: auto;
         }
 
-        footer p {
-            font-size: 1rem;
-            opacity: 0.8;
+        .contact-box > p {
+            color: var(--muted);
+            margin: 12px auto 28px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 17px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            transition: .25s;
+        }
+
+        .contact-link:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: .85rem;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
 
-            .timeline-item {
-                width: calc(100% - 4rem);
-                margin-left: 4rem !important;
-                margin-right: 0 !important;
-            }
-
-            .timeline-item::before {
-                left: -17px !important;
-            }
-
-            .timeline::before {
-                left: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
+        @media (max-width: 850px) {
             .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                right: 0;
+                background: #0b1d33;
+                padding: 25px 5%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
                 display: flex;
             }
 
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-content p {
-                font-size: 1.1rem;
-            }
-
-            .section-bg {
-                margin: 1rem;
-                padding: 2rem 1.5rem;
-            }
-
-            .skills-grid {
+            .about-grid,
+            .skills-grid,
+            .projects-grid,
+            .opportunities-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            header {
+                min-height: auto;
+                padding: 150px 0 90px;
             }
 
-            .about-content,
-            .contact-content {
-                gap: 2rem;
-            }
-
-            .social-links {
-                gap: 1.5rem;
-            }
-
-            .contact-details div {
-                padding: 0.8rem;
-            }
-
-            .timeline-item {
-                width: calc(100% - 3rem);
-                margin-left: 3rem !important;
-                padding: 2rem;
+            .section {
+                padding: 70px 0;
             }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
             }
 
             .hero-content h1 {
-                font-size: 2.2rem;
+                letter-spacing: -1px;
             }
 
-            .hero-content p {
-                font-size: 1rem;
+            .card {
+                padding: 22px;
             }
 
-            .btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+            .project-content {
+                padding: 20px;
             }
 
-            .section-bg {
-                margin: 0.5rem;
-                padding: 1.5rem 1rem;
+            .contact-links {
+                flex-direction: column;
             }
 
-            .skill-card,
-            .project-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .timeline-item {
-                width: calc(100% - 2rem);
-                margin-left: 2rem !important;
-                padding: 1.5rem;
-            }
-
-            .social-links {
-                gap: 1rem;
-            }
-
-            .social-links a {
-                font-size: 1.5rem;
-                padding: 0.8rem;
+            .contact-link {
+                justify-content: center;
             }
         }
 
-        /* Animations */
-        .animate__fadeInUp {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            *, *::before, *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
             }
-        }
-
-        .delay-1 {
-            animation-delay: 0.2s;
-        }
-
-        .delay-2 {
-            animation-delay: 0.4s;
-        }
-
-        .delay-3 {
-            animation-delay: 0.6s;
-        }
-
-        /* Message styles */
-        .message {
-            padding: 1.2rem;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .message.success {
-            background: rgba(40, 167, 69, 0.1);
-            color: #28a745;
-            border-color: rgba(40, 167, 69, 0.3);
-        }
-
-        .message.error {
-            background: rgba(220, 53, 69, 0.1);
-            color: #dc3545;
-            border-color: rgba(220, 53, 69, 0.3);
-        }
-
-        /* Loading animation */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: var(--accent-color);
-            animation: spin 1s ease-in-out infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <a href="#home" class="logo">AMERY DJANANG KOUOMOU</a>
-            <ul>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#home" class="logo">AMERY<span>.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Ouvrir le menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
-                <li><a href="#formation">Formation</a></li>
+                <li><a href="#formation">Parcours</a></li>
+                <li><a href="#opportunities">CV & Opportunités</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Header -->
+    <!-- ACCUEIL -->
     <header id="home">
         <div class="container">
             <div class="hero-content">
-                <h1 class="animate__fadeInUp">AMERY DJANANG KOUOMOU</h1>
-                <p class="animate__fadeInUp delay-1">Étudiante en 3e année d'informatique à SUPINFO Paris, je m'oriente vers une spécialisation en Data Engineering et Data Analysis for AI dès la rentrée 2026. À l'aise avec les outils d'analyse (Power BI, SQL, Python...) et de développement (Node.js, Express.js, JavaScript...), je recherche un stage pour juin 2026 et une alternance en data pour septembre 2026.</p>
-                <a href="#projects" class="btn animate__fadeInUp delay-2">Voir mes projets</a>
+
+                <div class="availability">
+                    <span class="availability-dot"></span>
+                    Ouverte aux opportunités en Data
+                </div>
+
+                <h1>
+                    AMERY DJANANG<br>
+                    <span class="gradient-text">KOUOMOU</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Mastère Data Engineering for AI · EFREI
+                </p>
+
+                <p class="hero-description">
+                    Étudiante en Mastère Data Engineering for AI à l'EFREI,
+                    je développe mes compétences en Data Engineering,
+                    Data Analytics et Business Intelligence.
+                    J'aime exploiter, structurer et valoriser les données
+                    afin de produire des informations fiables et utiles
+                    à la prise de décision.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn">
+                        <i class="fas fa-chart-line"></i>
+                        Découvrir mes projets
+                    </a>
+
+                    <a href="#opportunities" class="btn btn-outline">
+                        <i class="fas fa-file-pdf"></i>
+                        Consulter mes CV
+                    </a>
+                </div>
+
+                <div class="hero-tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>Pandas</span>
+                    <span>Data Analytics</span>
+                    <span>Data Engineering</span>
+                </div>
+
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- À PROPOS -->
+    <section class="section section-alt" id="about">
         <div class="container">
-            <div class="section-bg">
-                <div class="section-title">
-                    <h2>À propos de moi</h2>
-                    <p>Découvrez qui est AMERY en quelques phrases</p>
+
+            <div class="section-heading">
+                <span class="eyebrow">Mon profil</span>
+                <h2>À propos de <span class="gradient-text">moi</span></h2>
+                <p>Mon parcours, mes motivations et ma vision de la Data.</p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="card about-text">
+                    <p>
+                        Originaire du Cameroun et venue en France pour poursuivre
+                        mes études en informatique, j'ai progressivement développé
+                        un intérêt particulier pour la Data et ses applications.
+                    </p>
+
+                    <p>
+                        Actuellement étudiante en Mastère Data Engineering for AI
+                        à l'EFREI, je développe une approche polyvalente autour
+                        de l'ingénierie des données, de l'analyse et de la
+                        Business Intelligence.
+                    </p>
+
+                    <p>
+                        Mes projets m'ont permis de travailler sur la préparation
+                        de données, l'analyse exploratoire, la création d'indicateurs
+                        et la visualisation. Mon expérience en développement backend
+                        m'a également familiarisée avec les API et la structuration
+                        des données.
+                    </p>
+
+                    <p>
+                        Mon objectif : continuer à apprendre, collaborer avec
+                        des équipes techniques et contribuer à des projets
+                        qui donnent de la valeur aux données.
+                    </p>
                 </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Jeune originaire du Cameroun, arrivée en France pour poursuivre mes études en informatique, je me suis rapidement orientée vers la data en réalisant que c'est là que se trouvent les vraies questions : comment transformer des milliers de lignes en décisions concrètes ?
-                           Aujourd'hui étudiante en 3e année à SUPINFO Paris, je passe mes journées entre Python, SQL et Power BI et je rejoins l'EFREI dès septembre 2026 pour un Mastère en Data Engineering. Mon approche est simple : des données propres, des visualisations claires, des insights utiles.
-                           Je recherche un stage dès juin 2026 et une alternance en septembre 2026.</p>
+
+                <div class="card about-highlight">
+
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Formation actuelle</h3>
+                            <p>Mastère Data Engineering for AI – EFREI</p>
+                        </div>
                     </div>
+
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div>
+                            <h3>Domaines d'intérêt</h3>
+                            <p>Data Engineering, Data Analytics et BI</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3>Mes valeurs</h3>
+                            <p>Curiosité, rigueur, apprentissage continu et esprit d'équipe</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- COMPÉTENCES -->
+    <section class="section" id="skills">
         <div class="container">
-            <div class="section-bg">
-                <div class="section-title">
-                    <h2>Mes Compétences</h2>
-                    <p>Technologies et outils que je maîtrise</p>
-                </div>
+
+            <div class="section-heading">
+                <span class="eyebrow">Mon savoir-faire</span>
+                <h2>Mes <span class="gradient-text">compétences</span></h2>
+                <p>
+                    Les technologies et outils que j'utilise dans mes projets
+                    académiques et professionnels.
+                </p>
+            </div>
+
             <div class="skills-grid">
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>SQL & Bases de données</h3>
-                    <p>MySQL, MongoDB, Firebase - Conception et optimisation de bases de données</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 85%;"></div>
-                    </div>
+                    <h3>Bases de données</h3>
+                    <p>
+                        SQL, MySQL, Firebase Admin SDK, MongoDB,
+                        PostgreSQL et Supabase.
+                    </p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-python"></i>
                     </div>
-                    <h3>Python & Data Analysis</h3>
-                    <p>Pandas, Matplotlib, NumPy - Analyse et visualisation de données</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 80%;"></div>
-                    </div>
+                    <h3>Analyse de données</h3>
+                    <p>
+                        Python, Pandas, NumPy, Matplotlib,
+                        Scikit-learn et Excel.
+                    </p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-column"></i>
                     </div>
-                    <h3>Power BI</h3>
-                    <p>Tableaux de bord interactifs et rapports d'analyse</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 75%;"></div>
-                    </div>
+                    <h3>Visualisation & BI</h3>
+                    <p>
+                        Power BI, Tableau, Power Query,
+                        tableaux de bord, KPI et reporting.
+                    </p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>Backend & API</h3>
-                    <p>Node.js, Express.js, API REST - Développement d'APIs robustes</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 70%;"></div>
-                    </div>
+                    <p>
+                        Node.js, Express.js, API REST, JSON,
+                        JavaScript, JWT, Swagger et PHP.
+                    </p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fab fa-js-square"></i>
+                        <i class="fas fa-gears"></i>
                     </div>
-                    <h3>JavaScript</h3>
-                    <p>Automatisation, scripts backend et intégration de services pour la manipulation de données.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 75%;"></div>
-                    </div>
+                    <h3>Outils & environnements</h3>
+                    <p>
+                        Git, GitHub, Docker, Jira, Postman,
+                        Render, GCP, ETL et Figma.
+                    </p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-people-group"></i>
                     </div>
-                    <h3>Structure Web</h3>
-                    <p>Bases de HTML et CSS pour structurer des contenus et prototypes de présentation de données.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 80%;"></div>
-                    </div>
+                    <h3>Compétences transversales</h3>
+                    <p>
+                        Méthodologies Agile, collaboration interéquipes,
+                        communication, rigueur analytique et résolution de problèmes.
+                    </p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <h3>Outils de développement</h3>
-                    <p>Git, GitHub, Docker, Jira - Gestion de projet et déploiement</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" style="width: 70%;"></div>
-                    </div>
-                </div>
+
             </div>
+
+            <div class="card" style="margin-top:25px;">
+                <h3 style="margin-bottom:10px;">
+                    <i class="fas fa-certificate" style="color:var(--cyan);"></i>
+                    Certification
+                </h3>
+                <p style="color:var(--muted);">
+                    IBM SkillsBuild – Unleashing the Power of AI Agents (2026)
+                </p>
+            </div>
+
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- PROJETS -->
+    <section class="section section-alt" id="projects">
         <div class="container">
-            <div class="section-bg">
-                <div class="section-title">
-                    <h2>Mes Projets</h2>
-                    <p>Réalisations académiques et professionnelles</p>
-                </div>
+
+            <div class="section-heading">
+                <span class="eyebrow">Mes réalisations</span>
+                <h2>Mes <span class="gradient-text">projets</span></h2>
+                <p>
+                    Des projets qui illustrent mon intérêt pour l'analyse,
+                    la visualisation et la manipulation des données.
+                </p>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="cancer.png" alt="Dépistage du cancer" />
+
+                <!-- PROJET CANCER -->
+                <article class="project-card">
+                    <div class="project-image cancer-visual">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>DATA ANALYSIS</span>
                     </div>
+
                     <div class="project-content">
-                        <h3>Analyse du taux de personnes atteintes de Cancer</h3>
-                        <p>Analyse statistique complète d'un dataset médical sur le cancer utilisant Python, Pandas et Matplotlib pour identifier les facteurs de risque et créer des visualisations prédictives.</p>
+                        <h3>Analyse des données liées au cancer</h3>
+
+                        <p>
+                            Projet d'analyse et de visualisation de données
+                            liées au cancer par tranche d'âge. Nettoyage,
+                            transformation, analyse exploratoire et statistique
+                            afin d'identifier des tendances et des indicateurs clés.
+                        </p>
+
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Pandas</span>
                             <span class="tag">Matplotlib</span>
                             <span class="tag">Data Analysis</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/amery964/cancer-data-analysis" target="_blank"><i class="fab fa-github"></i> Code source</a>
-                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/amery964/cancer-data-analysis"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            Voir le code source
+                        </a>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+
+                <!-- PROJET VENTES -->
+                <article class="project-card">
                     <div class="project-image">
-                        <img src="ventes.png" alt="Analyse des ventes" />
+                        <img src="ventes.png"
+                             alt="Projet d'analyse des ventes"
+                             loading="lazy">
                     </div>
+
                     <div class="project-content">
                         <h3>Analyse des ventes</h3>
-                        <p>Mini-projet d'analyse de données avec Python (Pandas) et Power BI : création/manipulation de DataFrame, filtrage des ventes, calcul global et moyenne, TVA à 20 %, GroupBy par produit, tri des ventes et export CSV pour visualisation.</p>
+
+                        <p>
+                            Analyse exploratoire d'un jeu de données de ventes
+                            avec Python et Pandas. Calcul d'indicateurs clés,
+                            agrégation par produit et création d'un tableau
+                            de bord Power BI interactif pour suivre les performances.
+                        </p>
+
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Pandas</span>
                             <span class="tag">Power BI</span>
-                            <span class="tag">Data Analysis</span>
+                            <span class="tag">KPI</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/amery964/mini-projet-ventes" target="_blank"><i class="fab fa-github"></i> Code source</a>
-                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/amery964/mini-projet-ventes"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            Voir le code source
+                        </a>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+
+                <!-- PROJET AUTO-ECOLE -->
+                <article class="project-card">
                     <div class="project-image">
-                        <img src="autoecole.png" alt="Auto-école Amenouveve" />
+                        <img src="autoecole.png"
+                             alt="Projet backend de gestion d'auto-école"
+                             loading="lazy">
                     </div>
+
                     <div class="project-content">
-                        <h3>Auto-école Amenouveve</h3>
-                        <p>Système de gestion complet pour auto-école avec API REST, base de données MySQL, et interface d'administration. Projet réalisé durant mon stage.</p>
+                        <h3>Application de gestion d'auto-école</h3>
+
+                        <p>
+                            Développement backend d'une application de gestion
+                            d'auto-école : conception d'une API REST,
+                            authentification JWT, gestion des rôles,
+                            structuration des données et déploiement.
+                        </p>
+
                         <div class="project-tags">
                             <span class="tag">Node.js</span>
                             <span class="tag">Express.js</span>
-                            <span class="tag">MySQL</span>
+                            <span class="tag">Firebase</span>
                             <span class="tag">API REST</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/amery964/backend-auto_ecole" target="_blank"><i class="fab fa-github"></i> Code source</a>
-                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/amery964/backend-auto_ecole"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            Voir le code source
+                        </a>
                     </div>
-                </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Formation Section -->
-    <section id="formation">
+    <!-- PARCOURS -->
+    <section class="section" id="formation">
         <div class="container">
-            <div class="section-bg">
-                <div class="section-title">
-                    <h2>Formations et Expériences</h2>
-                    <p>Mon parcours académique orienté Data Engineering et analyse de données.</p>
+
+            <div class="section-heading">
+                <span class="eyebrow">Mon parcours</span>
+                <h2>Formation & <span class="gradient-text">expérience</span></h2>
+                <p>Les étapes de mon parcours académique et professionnel.</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>Mastère Data Engineering for AI</h3>
+                    <div class="timeline-date">2026 – 2028 · EFREI, Paris</div>
+                    <p>
+                        Formation orientée Data Engineering et intelligence artificielle.
+                        Cours pertinents : Data Management, Data Visualisation avec Tableau,
+                        Machine Learning & Deep Learning, Data Quality et architecture Data.
+                    </p>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Master of Data Engineering for AI</h3>
-                        <div class="date">Dès septembre 2026</div>
-                        <p>EFREI, Paris - Formation axée sur la gestion des données, les pipelines et l'intelligence artificielle.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Bachelor Ingénierie informatique</h3>
-                        <div class="date">En cours</div>
-                        <p>Supinfo, Paris - Développement, bases de données et data analysis.</p>
-                    </div>
+
+                <div class="timeline-item">
+                    <h3>Développeuse Backend – STUDELECTA CONSULTING</h3>
+                    <div class="timeline-date">Février 2026 – Mai 2026 · Stage</div>
+                    <p>
+                        Participation au développement d'une application web
+                        de gestion d'auto-école et à l'optimisation de processus.
+                    </p>
+                    <ul>
+                        <li>Conception et développement d'une API REST avec Node.js et Express.</li>
+                        <li>Mise en place de l'authentification JWT et de la gestion des rôles.</li>
+                        <li>Modélisation et structuration des données avec Firebase.</li>
+                        <li>Déploiement et maintenance de l'API sur Render.</li>
+                        <li>Scripts d'automatisation des traitements et contrôles qualité des flux entrants.</li>
+                    </ul>
                 </div>
+
+                <div class="timeline-item">
+                    <h3>Bachelor of Engineering – Ingénierie informatique</h3>
+                    <div class="timeline-date">2025 – 2026 · SUPINFO, Paris · Diplôme obtenu</div>
+                    <p>
+                        Formation en ingénierie informatique.
+                        Cours pertinents : Big Data Fundamentals, API REST,
+                        bases de données NoSQL, sécurité des applications
+                        et introduction à l'intelligence artificielle.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- OPPORTUNITÉS ET CV -->
+    <section class="section section-alt" id="opportunities">
         <div class="container">
-            <div class="section-bg">
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>Restons en contact</p>
-                </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Informations de Contact</h3>
-                    <p>Je suis disponible à répondre à toutes vos questions.</p>
-                    <p><strong>📍 Recherche active :</strong> Stage pour juin 2026 et alternance pour septembre 2026</p>
-                    <div class="contact-details">
-                        <div>
-                            <i class="fas fa-envelope"></i>
-                            <span>amerykouomou@gmail.com</span>
-                        </div>
-                        <div>
-                            <i class="fas fa-phone"></i>
-                            <span>+33765877921</span>
-                        </div>
-                        <div>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Paris, France</span>
-                        </div>
-                        <div>
-                            <i class="fas fa-file-pdf"></i>
-                            <a href="cv-stage.pdf" download style="color: var(--accent-color); text-decoration: none;">CV Stage (Télécharger)</a>
-                        </div>
-                        <div>
-                            <i class="fas fa-file-pdf"></i>
-                            <a href="cv-alternance.pdf" download style="color: var(--accent-color); text-decoration: none;">CV Alternance (Télécharger)</a>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/amery-djanang-kouomou-801789388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/amery964" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Envoyez-moi un message</h3>
-                    <p>Pour me contacter directement, utilisez ce formulaire ou envoyez-moi un email à <a href="mailto:amerykouomou@gmail.com" style="color: var(--accent-color);">amerykouomou@gmail.com</a></p>
 
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Contact rapide</h4>
-                        <p style="margin-bottom: 1rem;">Vous pouvez également me contacter via :</p>
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <a href="mailto:amerykouomou@gmail.com" class="btn" style="text-align: center; text-decoration: none;">
-                                <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
-                                Email direct
-                            </a>
-                            <a href="https://www.linkedin.com/in/amery-djanang-kouomou-801789388/" target="_blank" class="btn" style="text-align: center; background: #0077b5; text-decoration: none;">
-                                <i class="fab fa-linkedin" style="margin-right: 0.5rem;"></i>
-                                LinkedIn
-                            </a>
-                        </div>
+            <div class="section-heading">
+                <span class="eyebrow">Collaborons ensemble</span>
+                <h2>Mes <span class="gradient-text">opportunités</span></h2>
+                <p>
+                    Je suis ouverte aux opportunités qui me permettront
+                    de mettre mes compétences au service de projets Data
+                    et de continuer à apprendre.
+                </p>
+            </div>
+
+            <div class="opportunities-grid">
+
+                <div class="card opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-briefcase"></i>
                     </div>
+
+                    <h3>Stage en Data</h3>
+
+                    <p>
+                        Je recherche un stage afin de contribuer à des missions
+                        concrètes en ingénierie, analyse et valorisation des données.
+                    </p>
+
+                    <ul>
+                        <li><i class="fas fa-check"></i> Durée recherchée : 4 à 6 mois</li>
+                        <li><i class="fas fa-check"></i> Disponible dès que possible</li>
+                        <li><i class="fas fa-check"></i> Data Engineering, Data Analytics, BI</li>
+                    </ul>
+
+                    <a href="CV_Amery_Kouomou_stage.pdf"
+                       class="btn" download>
+                        <i class="fas fa-download"></i>
+                        Télécharger mon CV Stage
+                    </a>
                 </div>
+
+                <div class="card opportunity-card">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+
+                    <h3>Alternance en Data</h3>
+
+                    <p>
+                        Je souhaite rejoindre une équipe dans laquelle
+                        je pourrai participer à des projets Data,
+                        développer mes compétences et apporter ma contribution.
+                    </p>
+
+                    <ul>
+                        <li><i class="fas fa-check"></i> Mastère Data Engineering for AI – EFREI</li>
+                        <li><i class="fas fa-check"></i> Rythme : 2 semaines en entreprise / 1 semaine en cours</li>
+                        <li><i class="fas fa-check"></i> Data Engineering, Data Analytics, BI</li>
+                    </ul>
+
+                    <a href="CV_Amery_Kouomou.pdf"
+                       class="btn" download>
+                        <i class="fas fa-download"></i>
+                        Télécharger mon CV Alternance
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Entrons en contact</span>
+                <h2>Parlons de vos <span class="gradient-text">projets</span></h2>
+            </div>
+
+            <div class="card contact-box">
+                <h3>Une opportunité ou un projet Data ?</h3>
+
+                <p>
+                    Vous souhaitez échanger sur mon parcours,
+                    mes projets ou une opportunité de stage ou d'alternance ?
+                    Je serai ravie de discuter avec vous.
+                </p>
+
+                <div class="contact-links">
+
+                    <a class="contact-link"
+                       href="mailto:amerykouomou@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+
+                    <a class="contact-link"
+                       href="tel:+33765877921">
+                        <i class="fas fa-phone"></i>
+                        +33 7 65 87 79 21
+                    </a>
+
+                    <a class="contact-link"
+                       href="https://www.linkedin.com/in/amery-djanang-kouomou-801789388/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+
+                    <a class="contact-link"
+                       href="https://github.com/amery964"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+
+                    <a class="contact-link"
+                       href="https://amery964.github.io/portfolio/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-globe"></i>
+                        Portfolio
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Amery Kouomou. Tous droits réservés.</p>
+            <p>
+                © <span id="year"></span> Amery Djanang Kouomou.
+                Conçu avec passion pour la Data.
+            </p>
         </div>
     </footer>
 
     <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+        // Année automatique
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Menu mobile
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Fermer le menu après un clic sur un lien
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Effet de navigation au défilement
+        window.addEventListener("scroll", function () {
+            const nav = document.querySelector("nav");
+
+            if (window.scrollY > 30) {
+                nav.style.boxShadow = "0 8px 30px rgba(0,0,0,.2)";
             } else {
-                navbar.classList.remove('scrolled');
+                nav.style.boxShadow = "none";
             }
         });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const navUl = document.querySelector('nav ul');
-
-        menuToggle.addEventListener('click', function() {
-            navUl.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Animate skill bars on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBars = entry.target.querySelectorAll('.skill-progress-bar');
-                    progressBars.forEach(bar => {
-                        bar.style.width = bar.style.width || '0%';
-                    });
-                }
-            });
-        }, observerOptions);
-
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-            observer.observe(skillsSection);
-        }
-
-        // Add animation classes on scroll
-        const animateOnScroll = function() {
-            const elements = document.querySelectorAll('.animate__fadeInUp');
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('animate__animated');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-
-        // Form validation (simulated since we removed PHP)
-        function showMessage(message, type) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${type}`;
-            messageDiv.textContent = message;
-
-            const form = document.querySelector('.contact-form');
-            form.insertBefore(messageDiv, form.firstChild);
-
-            setTimeout(() => {
-                messageDiv.remove();
-            }, 5000);
-        }
-
-        // Simulate form submission
-        document.addEventListener('DOMContentLoaded', function() {
-            // Since we removed the PHP form, we'll show a helpful message
-            console.log('Portfolio chargé avec succès ! Pour contacter Amery, utilisez les liens email ou LinkedIn.');
-        });
     </script>
+
 </body>
 </html>
